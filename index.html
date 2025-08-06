@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>🎉 З Днем Народження! 🎂</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="confetti-container" id="confetti"></div>
+    
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title">
+                <span class="wave">🎉</span>
+                З Днем Народження!
+                <span class="wave">🎂</span>
+            </h1>
+            <h2 class="sub-title">14? Все, пора заводити плейлист під назвою 'existential crisis'. 🎧😵‍💫</h2>
+            <div class="gift-container">
+                <div class="gift-box" onclick="openGift()">
+                    <div class="gift-box-base"></div>
+                    <div class="gift-box-lid">
+                        <div class="gift-ribbon-h"></div>
+                        <div class="gift-ribbon-v"></div>
+                        <div class="gift-bow"></div>
+                    </div>
+                    <div class="gift-sparkles"></div>
+                </div>
+                <div class="gift-text">Натисни на подарунок! 🎁</div>
+                
+                <div class="gift-surprise" id="giftSurprise">
+                    <div class="surprise-content">
+                        <img src="gorilla_meme.jpg" alt="Gorilla Meme" class="gorilla-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-emojis">
+            <span class="emoji float-1">🎈</span>
+            <span class="emoji float-2">🎁</span>
+            <span class="emoji float-3">🍰</span>
+            <span class="emoji float-4">✨</span>
+            <span class="emoji float-5">🎊</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="meme-section">
+            <h3>Мемна зона активована! 😂</h3>
+            <div class="meme-grid">
+                <div class="meme-card" onclick="showMeme(1)">
+                    <div class="meme-content">
+                        <img src="boromir_meme.jpg" alt="Boromir Meme" class="meme-image">
+                        <p class="meme-text">One does not simply... стати 14 і офіційно називатися підлітком! 😎</p>
+                    </div>
+                </div>
+                <div class="meme-card" onclick="showMeme(2)">
+                    <div class="meme-content">
+                        <div class="drake-meme-container">
+                            <img src="drake_meme.jpg" alt="Drake meme" class="drake-image">
+                            <div class="drake-text-overlay">
+                                <div class="drake-top">
+                                    <span class="drake-text">13 років 😒</span>
+                                </div>
+                                <div class="drake-bottom">
+                                    <span class="drake-text">14 років 😎✨</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meme-card" onclick="showMeme(3)">
+                    <div class="meme-content">
+                        <div class="custom-meme gradient-meme">
+                            <h4>POV:</h4>
+                            <p>Тобі 14 і ти вже можеш говорити<br>"коли я була маленькою" 😎</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wishes-section">
+            <h3>Побажання для найкращої сестри! 💕</h3>
+            <div class="wishes-container">
+                <div class="wish-card">
+                    <i class="fas fa-heart"></i>
+                    <p>Нехай твої 14 років будуть наповнені сміхом, радістю та безліччю селфі! 📸</p>
+                </div>
+                <div class="wish-card">
+                    <i class="fas fa-star"></i>
+                    <p>Бажаю, щоб всі твої мрії збулися, а TikTok алгоритм завжди показував тобі топ контент! 📱</p>
+                </div>
+                <div class="wish-card">
+                    <i class="fas fa-gift"></i>
+                    <p>Нехай цей рік принесе тобі круті пригоди, нових друзів і море позитиву! 🌟</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Інтерактивна зона! 🎮</h3>
+            <div class="buttons-container">
+                <button class="magic-btn" onclick="createConfetti()">
+                    <i class="fas fa-magic"></i>
+                    Конфеті!
+                </button>
+                <button class="magic-btn" onclick="playBirthdaySong()">
+                    <i class="fas fa-music"></i>
+                    Музичка!
+                </button>
+                <button class="magic-btn" onclick="showSurprise()">
+                    <i class="fas fa-surprise"></i>
+                    Сюрприз!
+                </button>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h3>14 років це...</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="number">5113</span>
+                    <span class="label">днів</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="number">122712</span>
+                    <span class="label">годин</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="number">∞</span>
+                    <span class="label">крутості</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Зроблено з ❤️ від найкращого брата</p>
+            <p class="footer-meme">P.S. Тепер ти в elit club 14-річних! Welcome aboard! 🚀</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно для сюрпризу -->
+    <div id="surpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSurprise()">&times;</span>
+            <h2>🎉 СЮРПРИЗ! 🎉</h2>
+            <div class="surprise-content">
+                <p>Ти найкраща сестра в світі!</p>
+                <div class="surprise-gif">
+                    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Happy Birthday GIF">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
